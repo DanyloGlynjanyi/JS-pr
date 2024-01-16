@@ -1,0 +1,106 @@
+body {
+    background-image: url("https://w.forfun.com/fetch/15/1507f6c1a1b108a78436eac5521c3344.jpeg");
+    font-family: 'Harry Potter', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    animation: magicalBackground 10s infinite alternate;
+}
+* {
+    animation: fadeIn 1s ease-in-out, disappear 1s ease-in-out 4s forwards;
+}
+
+
+#postDetails {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #221f1f;
+    padding: 20px;
+    color: gold;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#creatorComments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.commentBlock {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    width: calc(25% - 20px);
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: gold;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.commentBlock:hover {
+    transform: scale(1.05);
+}
+
+#btnExit {
+    font-family: 'Harry Potter', sans-serif;
+    font-style: normal;
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #221f1f;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#btnExit:hover {
+    background-color: #332e2e;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes magicalBackground {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(1.5) contrast(1.2) hue-rotate(45deg);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

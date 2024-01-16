@@ -1,0 +1,169 @@
+*{
+overflow: hidden;
+    font-style: normal;
+    font-family: 'Harry Potter', sans-serif;
+}
+body {
+    background-image: url("https://w.forfun.com/fetch/02/029f3932cdb5d6880a1cc2e0a9ba65ed.jpeg");
+    font-family: 'Harry Potter', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    list-style-type: none;
+    font-size: 16.2px;
+    color: gold;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: bold;
+}
+
+#userDetails {
+    opacity: 0;
+    transform: translateY(20px);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#userDetails {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#postsButton {
+    height: 5vh;
+    width: 90%;
+
+}
+
+#btnGoBack {
+    font-size: 16px;
+    width: 70%;
+}
+
+#btnGoBack,
+#postsButton,
+#detailsButton {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.1s ease;
+    text-align: center;
+}
+
+#btnGoBack:hover,
+#postsButton:hover,
+#detailsButton:hover {
+    background-color: #221f1f;
+}
+
+#userPosts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.postBlock {
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+    width: 45%;
+    margin: 5px ;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: linear-gradient(to right, #4B0082, #800080, #4169E1, #9932CC, #4169E1, #8A2BE2, #4169E1, #9932CC, #8A2BE2);
+    color: #221f1f;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8) inset;
+
+}
+
+.postTitle {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.postBlock:hover .postTitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.postBlock:hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btnGo {
+    position: fixed;
+    bottom: 5px;
+    left: 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.btnGo:hover {
+    background-color: #221f1f;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: magicalParticles 10s infinite linear;
+}
+
+.postBlock::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4B0082, #800080, #4169E1, #9932CC, #4169E1, #8A2BE2, #4169E1, #9932CC, #8A2BE2);
+    opacity: 0.5;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(255, 223, 0, 0.8) inset;
+}
+
+@keyframes magicalParticles {
+    from {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    to {
+        transform: translateY(100%) rotate(360deg);
+    }
+}
